@@ -1,4 +1,5 @@
 body {
+
     background-color: #000a1f;
     display: flex;
     justify-content: center;        /* Center the container horizontally */
@@ -9,12 +10,21 @@ body {
 }
 
 h1 {
+
     color: whitesmoke;
     font-size: 5.5rem;
     margin: -20px auto 20px auto;    /* Center the heading */
+
+    /*
+        margin: <top> <right> <bottom> <left>;
+        margin: <top> <right&left> <bottom>;
+        margin: <top&bottom> <right&left>;
+        margin: <all>;
+    */
 }
 
 .container {
+
     width: 70%;
     height: 450px;
     display: flex;
@@ -24,6 +34,7 @@ h1 {
 }
 
 .container img {
+
     width: 10%;
     height: 100%;
     object-fit: cover;              /* Prevents the image from stretching */
@@ -33,6 +44,7 @@ h1 {
 }
 
 .container img:hover {
+
     width: 20%;                     /* Scale the image on hover */
 }
 
