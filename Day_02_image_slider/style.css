@@ -43,6 +43,20 @@ h1 {
     transition: width 1s ease;      /* Use transform for smooth scaling by adding delay */
 }
 
+/*
+    Why " .container img " and not just "img" ?
+
+    1. "img" would select all images on the page, but we only want to 
+        style the images inside the container.
+
+    2. ".container img" selects only the images inside the container,
+        allowing for more control and specificity. 
+        
+        For example, if you have multiple images across your page 
+        but only want to style images inside a particular container, 
+        you would use this selector.
+*/
+
 .container img:hover {
 
     width: 20%;                     /* Scale the image on hover */

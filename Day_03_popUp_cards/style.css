@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+
+/* Container for Cards */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Styles */
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Common Face Styles */
+.container .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.container .card .face.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container .card .face.face1.linkedin {
+    background-color: salmon;
+}
+
+.container .card .face.face1.twitter {
+    background-color: lightskyblue;
+}
+
+.container .card .face.face1.github {
+    background-color: lightseagreen;
+}
+
+.container .card .face.face1 .content i {
+    color: #fff;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Back Face (face2) */
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-100%);
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: transform 0.5s ease-in-out, visibility 0.5s, opacity 0.5s;
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Make opaque */
+}
+
+/* Back Face Content */
+.container .card .face.face2 h3 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 30px;
+}
+
+.container .card .face.face2 p {
+    text-align: center;
+}
