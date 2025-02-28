@@ -9,6 +9,7 @@ body {
     flex-direction: column;         /* Align items vertically */
 }
 
+
 h1 {
 
     color: whitesmoke;
@@ -23,6 +24,7 @@ h1 {
     */
 }
 
+
 .container {
 
     width: 70%;
@@ -32,6 +34,7 @@ h1 {
     align-items: center;            /* Center the images vertically */
     gap: 10px;
 }
+
 
 .container img {
 
@@ -56,6 +59,7 @@ h1 {
         but only want to style images inside a particular container, 
         you would use this selector.
 */
+
 
 .container img:hover {
 
